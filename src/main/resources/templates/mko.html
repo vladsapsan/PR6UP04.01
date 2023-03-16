@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Добавление фильма</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form th:action="${'/mko/add'}" method="post">
+  <input type="text" name="name" placeholder="Введите название фильма">
+  <select  name="street">
+    <div th:each="pro : ${type}">
+      <option th:text="${pro.street}"></option>
+    </div>
+  </select>
+  <br>
+  <button type="submit">Добавить фильм</button>
+</form>
+</body>
+</html>

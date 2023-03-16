@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>МногиеКоМногим</title>
+</head>
+<body>
+<form th:action="${'/mkm/add'}" method="post">
+    <select  name="anime">
+        <div th:each="pro : ${anime}">
+            <option th:text="${pro.name}"></option>
+        </div>
+    </select>
+    <select  name="category">
+        <div th:each="pro : ${category}">
+            <option th:text="${pro.name}"></option>
+        </div>
+    </select>
+    <br>
+    <button type="submit">Добавить связь</button>
+</form>
+</body>
+</html>
